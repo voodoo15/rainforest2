@@ -9,7 +9,6 @@
 </p>
 
 <p>
-
     <%= link_to "Back", products_path %>
 </p>
 <p>
@@ -22,7 +21,7 @@
   Reviews for <%= @product.name %>
 </p>
 
-<% @product.reviews.each do | review | %>
+<% @product.reviews.reverse.each do | review | %>
   <p>
     <%= review.comment %>
 

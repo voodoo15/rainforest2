@@ -10,7 +10,7 @@
 
       <p>
         <% if current_user %>
-          Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path( "current" ), :method => :delete %>
+          Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path( "current" ), :method => :delete %>.  <%= link_to "Profile", "/users/#{ session[ :user_id ] }" %>
         <% else %>
           <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
         <% end %>
