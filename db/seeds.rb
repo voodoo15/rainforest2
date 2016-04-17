@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.create!(
+  email: "bigarn@rogers.com",
+  password: "1234"
+)
+
+Product.create!(
+  name: "MP-22",
+  description: "Takara Tomy Transformers Masterpiece Ultra Magnus",
+  price_in_cents: 25000
+)
+
+Product.create!(
+  name: "MP-10",
+  description:  "Takara Tomy Transformers Masterpiece Optimus Prime",
+  price_in_cents:  25000
+)
