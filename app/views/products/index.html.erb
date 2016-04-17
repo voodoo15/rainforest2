@@ -1,2 +1,15 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>All Products</h1>
+
+<% @products.each do | p | %>
+    <p>
+      <%= link_to p.name, "/products/#{ p.id }" %>
+    </p>
+    <p>
+        <%= p.description %>
+    </p>
+    <p>
+        <%= format( "%.02f", p.price_in_cents / 100 ) %>
+    </p>
+<% end %>
+
+<%= link_to "New", new_product_path %>
