@@ -16,6 +16,25 @@
     <%= link_to "Edit", edit_product_path %>
 </p>
 
+<h4>Reviews</h4>
+
+<p>
+  Reviews for <%= @product.name %>
+</p>
+
+<% @product.reviews.each do | review | %>
+  <p>
+    <%= review.comment %>
+
+  <% if review.user != nil %>
+  <em> by <%= review.user.email %> </em>
+  Added on: <%= review.created_at %>
+  <% end %>
+
+  </p>
+<% end %>
+
+
 <% if current_user %>
   <h4>New Review</h4>
 
@@ -37,7 +56,7 @@
         <%= f.text_area :comment %>
     </p>
     <p>
-        <% f.submit %>
+        <%= f.submit %>
     </p>
   <% end %>
 
