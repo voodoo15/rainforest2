@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+#Other files to ignore
+/.DS_Store
+/users/.DS_Store
+/vendor/.DS_Store
