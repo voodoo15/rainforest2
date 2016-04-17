@@ -11,5 +11,6 @@
         <%= p.formatted_price %>
     </p>
 <% end %>
-
-<%= link_to "New", new_product_path %>
+<% if current_user %>
+  <%= link_to "New", new_product_path %>
+<% end %>
